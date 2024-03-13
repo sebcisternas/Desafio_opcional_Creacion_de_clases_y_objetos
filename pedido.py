@@ -1,8 +1,10 @@
 from te import TeProducto
 
+#instancia de TeProducto y llamado a dos variables por consola para hacer la solicitu de datos.
 producto = TeProducto()
 sabor = int(input("Ingrese el sabor de té (té negro = 1, té verde = 2, infusión de hierbas = 3): "))
 cantidad= int(input("Ingresa la cantidad de material con valores enteros (300gr=300 y 500gr=500) : "))
+
 
 tiempo_preparacion,recomendacion,nombre = producto.tiempo_prep(sabor)
 precio,formato = producto.obtener_precio(cantidad)

@@ -1,5 +1,6 @@
 class TeProducto:
     
+    #Precios de los productos y Datos de los tipos de producto entregados de forma estructurada en un diccionario.
     precios = {"300gr": 3000, "500gr":5000 }
     datosTe = {
         "té negro": {
@@ -16,6 +17,7 @@ class TeProducto:
         }
     }
     
+    #Metodo Estatico que bueca segun el N°ingresado correspondite al sabor,el tipo de sabor, el tiempo de preparacion y la recomendacion de cada producto.
     @staticmethod
     def tiempo_prep(sabor):
         if  sabor == 1:
@@ -32,6 +34,7 @@ class TeProducto:
             recomendacion= TeProducto.datosTe.get("agua de hierbas").get("recomendacion")    
         return tiempo,recomendacion,nombre
     
+    #Metodo estatico que busca el precio dependiendo del formato que se busque
     @staticmethod
     def obtener_precio(valor):
         if valor == 300:
